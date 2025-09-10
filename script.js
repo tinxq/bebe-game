@@ -27,7 +27,7 @@ speedSlider.addEventListener("input", () => {
 });
 
 function jump() {
-  if (!isGameOver && jumpCount < 2) {
+  if (!isGameOver && jumpCount < 3) { //النطات
     velocity = jumpStrength;
     jumpCount++;
   }
@@ -43,7 +43,7 @@ function updatePlayer() {
     playerBottom += velocity;
     if (playerBottom <= 0) {
       playerBottom = 0;
-      velocity = 0;
+      velocity = jumpStrength;
       jumpCount = 0;
     }
     player.style.bottom = playerBottom + "px";
