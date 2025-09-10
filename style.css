@@ -24,7 +24,7 @@ body {
 #player {
   width: 100px;
   height: 100px;
-  background: url("player.png") no-repeat center/contain;
+  background: url("player11.png") no-repeat center/contain;
   position: absolute;
   bottom: 0;
   left: 40px;
@@ -49,15 +49,6 @@ body {
   0%   { bottom: 0; }
   50%  { bottom: 180px; }
   100% { bottom: 0; }
-}
-
-#score {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
 }
 
 #game-over {
@@ -94,4 +85,25 @@ body {
   padding: 10px;
   border-radius: 5px;
   color: white;
+}
+#score {
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  font-size: 4vw; 
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 10;
+}
+
+#game-controls {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  background: rgba(0,0,0,0.5);
+  padding: 1vh 2vw;
+  border-radius: 1vw;
+
+  color: white;
+  z-index: 9;
 }
