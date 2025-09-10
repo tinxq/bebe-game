@@ -27,7 +27,7 @@ body {
   background: url("player.png") no-repeat center/contain;
   position: absolute;
   bottom: 0;
-  left: 4.  0px;
+  left: 40px;
 }
 
 .obstacle {
@@ -38,7 +38,7 @@ body {
   background-size: cover; 
   position: absolute;
   bottom: 0;
-  right: 40px;   
+  right: 70px;   
 }  
 
 .jump {
@@ -85,4 +85,13 @@ body {
   border-radius: 41px;
   color: #000;
   font-family: 'Press Start 2P', monospace;
+}
+#game-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
 }
