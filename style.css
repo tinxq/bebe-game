@@ -98,12 +98,16 @@ body {
 
 #game-controls {
   position: absolute;
+  width: 118px;
   top: 2vh;
-  right: 2vw;
+  right: 7vw;
   background: rgba(0,0,0,0.5);
-  padding: 1vh 2vw;
+  padding: 1vh 1vw;
   border-radius: 1vw;
-
   color: white;
   z-index: 9;
+}
+#speedSlider{
+width: 100px;
+background-color: #c73a67;
 }
