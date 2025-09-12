@@ -108,9 +108,13 @@ const spriteContainer = document.getElementById("spriteContainer");
 const playermo = document.getElementById("player");
 
 const playerSprites = [
-  "player.png",
-  "player11.png",
-  "Subject11.png",
+  "player1.png",
+  "player2.png",
+  "player3.png",
+  "player4.png",
+  "player5.png",
+  "player6.png",
+  "player7.png",
 ];
 
 function applyPlayerSprite(url) {
