@@ -91,7 +91,7 @@ body {
   top: 2vh;
   left: 2vw;
   font-weight: bold;
-  color: #ffffff;
+  color:#ffffff;
   z-index: 9;
   background: rgba(0,0,0,0.5);
   padding: 4px;
@@ -168,12 +168,11 @@ background-color: #c73a67;
 #changePlayerBtn{
   position: absolute;
   top: 2vh;
-  left: 31vw;
-  font-weight: bold;
+  left: 40vw;
   color: #ffffff;
   z-index: 9;
   background: rgba(0,0,0,0.5);
   padding: 4px;
   border-radius: 1vw;
-     font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P', monospace;
 }
