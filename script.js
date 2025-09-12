@@ -27,7 +27,7 @@ speedSlider.addEventListener("input", () => {
 });
 
 function jump() {
-  if (!isGameOver && jumpCount < 3) { //النطات
+  if (!isGameOver && jumpCount < 3) { 
     velocity = jumpStrength;
     jumpCount++;
   }
@@ -97,4 +97,76 @@ restartBtn.addEventListener("click", () => {
     resetObstaclePosition(i);
   });
   moveObstacles();
+});
+
+
+
+const changePlayerBtn = document.getElementById("changePlayerBtn");
+const playerModal = document.getElementById("playerModal");
+const closeModal = document.getElementById("closeModal");
+const spriteContainer = document.getElementById("spriteContainer");
+const playermo = document.getElementById("player");
+
+const playerSprites = [
+  "player.png",
+  "player11.png",
+  "Subject11.png",
+];
+
+function applyPlayerSprite(url) {
+  player.style.backgroundImage = `url('${url}')`;
+  player.style.backgroundSize = "contain";
+  player.style.backgroundRepeat = "no-repeat";
+  player.style.backgroundPosition = "center";
+  localStorage.setItem("selectedPlayerSprite", url);
+}
+
+function populateSprites() {
+  spriteContainer.innerHTML = "";
+  const saved = localStorage.getItem("selectedPlayerSprite");
+  playerSprites.forEach((url) => {
+    const div = document.createElement("div");
+    div.className = "sprite";
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = "player sprite";
+    div.appendChild(img);
+    if (saved && saved === url) div.classList.add("selected");
+
+    div.addEventListener("click", () => {
+      document.querySelectorAll(".sprite").forEach(s => s.classList.remove("selected"));
+      div.classList.add("selected");
+      applyPlayerSprite(url);
+      playerModal.style.display = "none";
+    });
+
+    spriteContainer.appendChild(div);
+  });
+}
+
+
+window.addEventListener("load", () => {
+  const savedSprite = localStorage.getItem("selectedPlayerSprite");
+  if (savedSprite) {
+    applyPlayerSprite(savedSprite);
+  } else {
+    applyPlayerSprite(playerSprites[0]);
+  }
+});
+
+
+changePlayerBtn.addEventListener("click", () => {
+  populateSprites();
+  playerModal.style.display = "block";
+});
+
+closeModal.addEventListener("click", () => {
+  playerModal.style.display = "none";
+});
+
+
+window.addEventListener("click", (e) => {
+  if (e.target === playerModal) {
+    playerModal.style.display = "none";
+  }
 });

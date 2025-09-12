@@ -12,7 +12,18 @@
 <link rel="icon" type="image/png" sizes="16x16" href="Subject7.png">
 </head>
 <body>
+
+
   <div class="game">
+    <button id="changePlayerBtn">Change Player</button>
+
+<div id="playerModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <div id="spriteContainer" class="sprite-container"></div>
+  </div>
+</div>
+
   <div id="game-controls">
   <label for="speedSlider">Speed:<span id="speedValue">5</span></label>
   <input type="range" id="speedSlider" min="1" max="10" value="5">
